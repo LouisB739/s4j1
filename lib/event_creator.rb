@@ -1,9 +1,8 @@
 require "pry"
 
+
 class Event_Creator 
-
     attr_accessor :start_date, :duration, :title, :attendees
-
     def initialize()
         puts "Salut, tu veux créer un événement ? Cool ! 
         Commençons. Quel est le nom de l'événement ?"
@@ -23,10 +22,8 @@ class Event_Creator
 
         @attendees = gets.chomp
 
-
-
+        Event.new(@start_date,@duration,@title,@attendees)
     end
 
 end
-
 binding.pry
